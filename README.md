@@ -1,5 +1,5 @@
 # SQL_Practice
 Practice SQL queries by solving problems available on Codesignal, LeetCode, and HackerRank <br/>
-[Codesignal](https://codesignal.com/) <br/>
-[HackerRank](https://www.hackerrank.com/domains/sql) <br/>
-[LeetCode](https://leetcode.com/problemset/database/)
+Link for CodeSignal: [CodeSignal](https://codesignal.com/) <br/>
+Link for HackerRank: [HackerRank](https://www.hackerrank.com/domains/sql) <br/>
+Link for LeetCode:   [LeetCode](https://leetcode.com/problemset/database/)
