@@ -8,3 +8,5 @@ country: the country to which you traveled.
 
 Given this diary table, create a semicolon-separated list of all the distinct countries you've visited, sorted lexicographically, and put the list in a table that has a single countries column.
 */
+SELECT GROUP_CONCAT(DISTINCT country) AS countries
+FROM diary;
