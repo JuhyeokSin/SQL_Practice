@@ -10,3 +10,17 @@ In your report, you need to include the number of competitors per country and an
 
 Given the foreignCompetitors table, compose the resulting table with two columns: country and competitors. The first column should contain the country name, and the second column should contain the number of competitors in this country. The table should be sorted by the country names in ascending order. In addition, it should have an extra row at the bottom with the summary, as described above.
 */
+SELECT
+  CASE
+    WHEN country IS NULL THEN "Total:"
+    ELSE country
+  END AS country,
+  COUNT(competitor) AS competitors
+FROM foreignCompetitors
+GROUP BY country WITH ROLLUP;
+
+/* Alternative solution by using COALESCE() funciton
+  SELECT COALESCE(country, "Total:") AS country, COUNT(competitor) AS competitors
+  FROM foreignCompetitors
+  GROUP BY country WITH ROLLUP;
+*/
