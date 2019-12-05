@@ -14,3 +14,19 @@ SELECT name
 FROM people_interests
 WHERE interests & 1 AND interests & 8
 ORDER BY name
+
+/* SET datatype
+The SET elements are stored in the MySQL table as a bitmap: each element is represented by a single bit. To demonstrate this, lets look at the following sample table, which will be the basis for the rest of this tutorial.
+
+CREATE TABLE set_test(
+    rowid INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    myset SET('Travel','Sports','Dancing','Fine Dining')
+);
+
+Element	    SET Value	Decimal Value
+Travel	    00000001	1
+Sports	    00000010	2
+Dancing	    00000100	4
+Fine Dining	00001000	8
+
+*/
