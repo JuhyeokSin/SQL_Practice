@@ -16,7 +16,7 @@ check for: teamid = 'GER'
 
 SELECT matchid, player
 FROM goal
-WHERE teamid='GER'
+WHERE teamid='GER';
 
 /* 2.
 From the previous query you can see that Lars Bender's scored a goal in game 1012. Now we want to know what teams were playing in that match.
@@ -28,7 +28,7 @@ Show id, stadium, team1, team2 for just game 1012
 
 SELECT id, stadium, team1, team2
 FROM game
-WHERE id=1012
+WHERE id=1012;
 
 /* 3.
 The FROM clause says to merge data from the goal table with that from the game table. The ON says how to figure out which rows in game go
@@ -42,4 +42,13 @@ Modify it to show the player, teamid, stadium and mdate for every German goal.
 */
 SELECT player, teamid, stadium, mdate
 FROM game JOIN ON (id=matchid)
-WHERE teamid='GER'
+WHERE teamid='GER';
+
+/* 4.
+Use the same JOIN as in the previous question.
+
+Show the team1, team2 and player for every goal scored by a player called Mario player LIKE 'Mario%'
+*/
+SELECT team1, team2, player
+FROM game JOIN goal ON (id=matchid)
+WHERE player LIKE 'Mario%';
