@@ -3,5 +3,5 @@ Practice SQL queries by solving problems available on Codesignal, LeetCode, and 
 Link for CodeSignal: [CodeSignal](https://codesignal.com/) <br/>
 Link for HackerRank: [HackerRank](https://www.hackerrank.com/domains/sql) <br/>
 Link for LeetCode:   [LeetCode](https://leetcode.com/problemset/database/) <br/>
-Link for SQLZOO: [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial/)<br/>
+Link for SQLZOO: [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)<br/>
 Solutions are based on MySQL.
