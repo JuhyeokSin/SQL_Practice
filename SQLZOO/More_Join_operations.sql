@@ -1,7 +1,7 @@
 /*
 This tutorial introduces the notion of a join. The database consists of three tables movie, actor and casting.
 
-More details about the database available at 
+More details about the database available at
 https://sqlzoo.net/wiki/More_details_about_the_database.
 */
 
@@ -59,3 +59,20 @@ Obtain the cast list for the film 'Alien'
 SELECT actor.name
 FROM casting JOIN actor ON (casting.actorid=actor.id)
 WHERE movieid IN (SELECT id FROM movie WHERE title = 'Alien');
+
+/* 8.
+List the films in which 'Harrison Ford' has appeared
+*/
+
+SELECT movie.title
+FROM movie JOIN casting ON id=movieid JOIN actor ON actorid=actor.id
+WHERE actor.name = 'Harrison Ford'
+
+/* 9.
+List the films where 'Harrison Ford' has appeared - but not in the starring role.
+[Note: the ord field of casting gives the position of the actor. If ord=1 then,
+this actor is in the starring role]
+*/
+SELECT movie.title
+FROM movie JOIN casting ON id=movieid JOIN actor ON actorid=actor.id
+WHERE actor.name = 'Harrison Ford' AND casting.ord <> 1
